@@ -2,21 +2,19 @@ from config import ASSISTANT_NAME
 from helpers.bot_utils import BOT_NAME, USERNAME
 
 
-START_TEXT = f"👋🏻 **Hello**, \n\nThis is **{BOT_NAME}** \nI Can Stream Lives, Radios, YouTube Videos & Telegram Audio / Video Files On Voice Chat Of Telegram Groups. Let's Enjoy Cinematic View Of Group Video Player With Your Friends 😉! \n\n**Made With ❤️ By @ImSafone!** 👑"
+START_TEXT = f"👋🏻 Hᴇʟʟᴏ, \n\nAᴍ **{BOT_NAME}** \nI Cᴀɴ Sᴛʀᴇᴀᴍ Lɪᴠᴇs, Rᴀᴅɪᴏs, YᴏᴜTᴜʙᴇ Vɪᴅᴇᴏs & Tᴇʟᴇɢʀᴀᴍ Aᴜᴅɪᴏ / Vɪᴅᴇᴏ Fɪʟᴇs Oɴ Vᴏɪᴄᴇ Cʜᴀᴛ Oғ Tᴇʟᴇɢʀᴀᴍ Gʀᴏᴜᴘs. Lᴇᴛ's Eɴɪᴏʏ Cɪɴᴇᴍᴀᴛɪᴄ Vɪᴇᴡ Oғ Gʀᴏᴜᴘ Vɪᴅᴇᴏ Pʟᴀʏᴇʀ Wɪᴛʜ Yᴏᴜʀ Fʀɪᴇɴᴅs 😉! \n\n**Mᴀᴅᴇ Wɪᴛʜ ❤️ Bʏ [🎥𝚂𝚃𝙾𝚁𝚈 𝚃𝙸𝙼𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 #𝙲𝙷𝙰𝚃𝙸𝙽𝙶💬](https://telegram.me/storytym)@!** 👑"
 HELP_TEXT = f"""
-🛠-- **Setting Up Bot**:--
+🛠-- **Sᴇᴛᴛɪɴɢ Uᴘ Bᴏᴛ**:--
 
-\u2022 Start Voice Chat In Your Group!
-\u2022 Add Me (@{USERNAME}) & My Assistant (@{ASSISTANT_NAME}) To Your Group!
-\u2022 Give Admin To Me (@{USERNAME}) & My Assistant (@{ASSISTANT_NAME}) In Your Group!
+\u2022 Iᴀᴍ Nᴏᴛ Fᴏʀ Yᴏᴜ
 
 ⚔️-- **Available Commands**:--
 
-\u2022 `/play` - Stream An Audio
-\u2022 `/stream` - Stream An Video
-\u2022 `/pause` - Pause Current Stream
-\u2022 `/resume` - Resume Paused Stream
-\u2022 `/endstream` - End Stream & Left VC
-\u2022 `/restart` - Restart Bot (Sudo Only)
+\u2022 /play - Sᴛʀᴇᴀᴍ Aɴ Aᴜᴅɪᴏ
+\u2022 /stream - Sᴛʀᴇᴀᴍ Aɴ Vɪᴅᴇᴏ
+\u2022 /pause - Pᴀᴜsᴇ Cᴜʀʀᴇɴᴛ Sᴛʀᴇᴀᴍ
+\u2022 /resume - Rᴇsᴜᴍᴇ Pᴀᴜsᴇᴅ Sᴛʀᴇᴀᴍ
+\u2022 /endstream - Eɴᴅ Sᴛʀᴇᴀᴍ & Lᴇғᴛ VC
+\u2022 /restart -  Rᴇsᴛᴀʀᴛ Bᴏᴛ (Sᴜᴅᴏ Oɴʟʏ)
 """
-ABOUT_TEXT = f"💡-- **Information**:-- \n\nThis bot is created for streaming videos in telegram group video chats using several methods from WebRTC. Powered by pytgcalls the async client API for the Telegram Group Calls and Pyrogram the telegram MTProto API Client Library and Framework in Pure Python for Users and Bots. \n\n**This bot licensed under GNU-GPL 3.0 License!**"
+ABOUT_TEXT = f"💡-- **DARK LORD**:-- \n\n❍ ᴄʀᴇᴀᴛᴏʀ : [ᴅᴀʀᴋ ʟᴏʀᴅ](t.me/VAMPIRE_KING_NO_1) ❍ ᴇᴅɪᴛᴏʀ : [ᴅᴀʀᴋ ᴀɴɢᴇʟ](t.me/DARKZ_ANGEL) ❍ ʟᴀɴɢᴜᴀɢᴇ : ᴘʏᴛʜᴏɴ3 ❍ ʟɪʙʀᴀʀʏ : ᴘʏʀᴏɢʀᴀᴍ ᴀsʏɴᴄɪᴏ 1.13.0 ❍ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ : [ᴄʟɪᴄᴋ ʜᴇʀᴇ](https://t.me/NOKIERUNNOIPPKITTUM)"
