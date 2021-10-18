@@ -17,21 +17,21 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQ
 @Client.on_message(filters.command(["play", f"play@{USERNAME}"]) & filters.group & ~filters.edited)
 @authorized_users_only
 async def play(client, m: Message):
-    msg = await m.reply_text("🔄 `Processing ...`")
+    msg = await m.reply_text("🔄 `Pʀᴏᴄᴇssɪɴɢ ...`")
     chat_id = m.chat.id
     media = m.reply_to_message
     if not media and not ' ' in m.text:
-        await msg.edit("❗ __Send Me An Live Radio Link / YouTube Video Link / Reply To An Audio To Start Audio Streaming!__")
+        await msg.edit("❗ __Sᴇɴᴅ Mᴇ Aɴ Lɪᴠᴇ Sᴛʀᴇᴀᴍ Lɪɴᴋ / YᴏᴜTᴜʙᴇ Vɪᴅᴇᴏ Lɪɴᴋ / Rᴇᴘʟʏ Tᴏ Aɴ Vɪᴅᴇᴏ Tᴏ Sᴛᴀʀᴛ Vɪᴅᴇᴏ Sᴛʀᴇᴀᴍɪɴɢ!__")
 
     elif ' ' in m.text:
         text = m.text.split(' ', 1)
         query = text[1]
         if not 'http' in query:
-            return await msg.edit("❗ __Send Me An Live Stream Link / YouTube Video Link / Reply To An Video To Start Video Streaming!__")
+            return await msg.edit("❗ __Sᴇɴᴅ Mᴇ Aɴ Lɪᴠᴇ Sᴛʀᴇᴀᴍ Lɪɴᴋ / YᴏᴜTᴜʙᴇ Vɪᴅᴇᴏ Lɪɴᴋ / Rᴇᴘʟʏ Tᴏ Aɴ Vɪᴅᴇᴏ Tᴏ Sᴛᴀʀᴛ Vɪᴅᴇᴏ Sᴛʀᴇᴀᴍɪɴɢ!__")
         regex = r"^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+"
         match = re.match(regex, query)
         if match:
-            await msg.edit("🔄 `Starting YouTube Audio Stream ...`")
+            await msg.edit("🔄 `Sᴛᴀʀᴛɪɴɢ YᴏᴜTᴜʙᴇ Aᴜᴅɪᴏ Sᴛʀᴇᴀᴍ ...`")
             try:
                 meta = ydl.extract_info(query, download=False)
                 formats = meta.get('formats', [meta])
@@ -39,11 +39,11 @@ async def play(client, m: Message):
                     ytstreamlink = f['url']
                 link = ytstreamlink
             except Exception as e:
-                return await msg.edit(f"❌ **YouTube Download Error !** \n\n`{e}`")
+                return await msg.edit(f"❌ **YᴏᴜTᴜʙᴇ Dᴏᴡɴʟᴏᴀᴅ Eʀʀᴏʀ !** \n\n`{e}`")
                 print(e)
 
         else:
-            await msg.edit("🔄 `Starting Live Audio Stream ...`")
+            await msg.edit("🔄 `Sᴛᴀʀᴛɪɴɢ YᴏᴜTᴜʙᴇ Aᴜᴅɪᴏ Sᴛʀᴇᴀᴍ ...`")
             link = query
 
         vid_call = VIDEO_CALL.get(chat_id)
@@ -84,11 +84,11 @@ async def play(client, m: Message):
                ]),
             )
         except Exception as e:
-            await msg.edit(f"❌ **An Error Occoured !** \n\nError: `{e}`")
+            await msg.edit(f"❌ **Eʀʀᴏʀ Oᴄᴄᴏᴜʀᴇᴅ  !** \n\nError: `{e}`")
             return await group_call.stop()
 
     elif media.audio or media.document:
-        await msg.edit("🔄 `Downloading ...`")
+        await msg.edit("🔄 `Dᴏᴡɴʟᴏᴀᴅɪɴɢ ...`")
         audio = await client.download_media(media)
 
         vid_call = VIDEO_CALL.get(chat_id)
@@ -109,7 +109,7 @@ async def play(client, m: Message):
             await group_call.start_audio(audio, repeat=False)
             AUDIO_CALL[chat_id] = group_call
             await msg.delete()
-            await m.reply_text(f"▶️ **Started [Audio Streaming](https://t.me/AsmSafone) In {m.chat.title} !**",
+            await m.reply_text(f"▶️ **Sᴛᴀʀᴛᴇᴅ [Aᴜᴅɪᴏ Sᴛʀᴇᴀᴍɪɴɢ](telegram.me/VAMPIRE_KING_NO_1) Iɴ {m.chat.title} !**",
                reply_markup=InlineKeyboardMarkup(
                [
                    [
@@ -129,20 +129,20 @@ async def play(client, m: Message):
                ]),
             )
         except Exception as e:
-            await msg.edit(f"❌ **An Error Occoured !** \n\nError: `{e}`")
+            await msg.edit(f"❌ Aɴ **Eʀʀᴏʀ Oᴄᴄᴏᴜʀᴇᴅ !** \n\nError: `{e}`")
             return await group_call.stop()
 
     else:
         await msg.edit(
-            "💁🏻‍♂️ Do you want to search for a YouTube song?",
+            "💁🏻‍♂️ Dᴏ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ sᴇᴀʀᴄʜ ғᴏʀ ᴀ YᴏᴜTᴜʙᴇ sᴏɴɢ?",
             reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "✅ Yes", switch_inline_query_current_chat=""
+                        "✅ Yᴇs", switch_inline_query_current_chat=""
                     ),
                     InlineKeyboardButton(
-                        "No ❌", callback_data="close"
+                        "ɴᴏ ❌", callback_data="close"
                     )
                 ]
             ]
@@ -153,10 +153,10 @@ async def play(client, m: Message):
 @Client.on_message(filters.command(["restart", f"restart@{USERNAME}"]))
 @sudo_users_only
 async def restart(client, m: Message):
-    k = await m.reply_text("🔄 `Restarting ...`")
+    k = await m.reply_text("🔄 `Rᴇsᴛᴀʀᴛɪɴɢ ...`")
     await sleep(3)
     os.execl(sys.executable, sys.executable, *sys.argv)
     try:
-        await k.edit("✅ **Restarted Successfully! \nJoin @AsmSafone For More!**")
+        await k.edit("✅ **Rᴇsᴛᴀʀᴛᴇᴅ Sᴜᴄᴄᴇssғᴜʟʟʏ! \nJᴏɪɴ [🎥𝚂𝚃𝙾𝚁𝚈 𝚃𝙸𝙼𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 #𝙲𝙷𝙰𝚃𝙸𝙽𝙶💬](https://t.me/storytym) Fᴏʀ Mᴏʀᴇ!**")
     except:
         pass
