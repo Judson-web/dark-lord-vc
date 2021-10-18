@@ -49,10 +49,10 @@ group_call = GroupCallFactory(User, GroupCallFactory.MTPROTO_CLIENT_TYPE.PYROGRA
 async def pause_callbacc(client, CallbackQuery):
     chat_id = CallbackQuery.message.chat.id
     if chat_id in AUDIO_CALL:
-        text = f"⏸ Paused !"
+        text = f"⏸ Pᴀᴜsᴇᴅ !"
         await AUDIO_CALL[chat_id].set_audio_pause(True)
     elif chat_id in VIDEO_CALL:
-        text = f"⏸ Paused !"
+        text = f"⏸ Pᴀᴜsᴇᴅ !"
         await VIDEO_CALL[chat_id].set_video_pause(True)
     else:
         text = f"❌ Nothing is Playing !"
