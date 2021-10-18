@@ -33,7 +33,7 @@ async def start(client, message):
             ],
             [
                 InlineKeyboardButton("𝙈𝙮 𝘿𝙚𝙫 🔥", url=f"telegram.me/VAMPIRE_KING_NO_1"),
-                InlineKeyboardButton("𝗦𝗲𝗮𝗿𝗰𝗵 𝗙𝗼𝗿 𝗔 𝗬𝗼𝘂𝘁𝘂𝗯𝗲 𝗩𝗲𝗱𝗶𝗼🔎", switch_inline_query_current_chat=''),
+                InlineKeyboardButton("𝗦𝗲𝗮𝗿𝗰𝗵 𝗬𝗼𝘂𝘁𝘂𝗯𝗲 𝗩𝗲𝗱𝗶𝗼🔎", switch_inline_query_current_chat=''),
             ],
             [
                 InlineKeyboardButton("𝘼𝙗𝙤𝙪𝙩 😎", callback_data="about"),
@@ -93,7 +93,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],
             [
                 InlineKeyboardButton("𝙈𝙮 𝘿𝙚𝙫 🔥", url=f"telegram.me/VAMPIRE_KING_NO_1"),
-                InlineKeyboardButton("𝗦𝗲𝗮𝗿𝗰𝗵 𝗙𝗼𝗿 𝗔 𝗬𝗼𝘂𝘁𝘂𝗯𝗲 𝗩𝗲𝗱𝗶𝗼🔎", switch_inline_query_current_chat=''),
+                InlineKeyboardButton("𝗦𝗲𝗮𝗿𝗰𝗵 𝗬𝗼𝘂𝘁𝘂𝗯𝗲 𝗩𝗲𝗱𝗶𝗼🔎", switch_inline_query_current_chat=''),
             ],
             [
                 InlineKeyboardButton("𝘼𝙗𝙤𝙪𝙩 😎", callback_data="about"),
