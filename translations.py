@@ -18,5 +18,4 @@ HELP_TEXT = f"""
 \u2022 /restart -  Rᴇsᴛᴀʀᴛ Bᴏᴛ (Sᴜᴅᴏ Oɴʟʏ)
 """
 ABOUT_TEXT = f"""
-💡-- **DARK LORD**:-- \n\n❍ ᴄʀᴇᴀᴛᴏʀ : [ᴅᴀʀᴋ ʟᴏʀᴅ](t.me/VAMPIRE_KING_NO_1)
-\u2022 **BTS ARMYS 🄵🄰🄽🄲🄻🅄🄱**:-- \n\n❍ ɢʀᴏᴜᴘ : [BTS ARMYS 🄵🄰🄽🄲🄻🅄🄱](https://t.me/BTS_GROUP_AMRY)"
+💡-- **DARK LORD**:-- \n\n❍ ᴄʀᴇᴀᴛᴏʀ : [ᴅᴀʀᴋ ʟᴏʀᴅ](t.me/VAMPIRE_KING_NO_1)"
